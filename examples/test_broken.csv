@@ -1,0 +1,6 @@
+title,url,xpath
+,smartfony/,(//*[@class="current_price"])[1]
+Белый ветер,https://shop.kz/offers/smartfony/,
+,,(//*[@class="current_price"])[3]
+,   , 
+qwerty,,
