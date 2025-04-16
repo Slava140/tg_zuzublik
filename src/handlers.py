@@ -6,12 +6,12 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message, CallbackQuery
 
-from src.config import settings
-from src.errors import SuffixNotAllowedError, InvalidDocumentSchemaError, UnableToReadError
-from src.keyboards import get_one_button_keyboard, get_two_buttons_keyboard
-from src.schemas import FullItemS
-from src.services import (save_document, validate_document, parse_prices,
-                          insert_items, get_average_by_url, update_item_prices)
+from config import settings
+from errors import SuffixNotAllowedError, InvalidDocumentSchemaError, UnableToReadError
+from keyboards import get_one_button_keyboard, get_two_buttons_keyboard
+from schemas import FullItemS
+from services import (save_document, validate_document, parse_prices,
+                      insert_items, get_average_by_url, update_item_prices)
 
 
 class Upload(StatesGroup):

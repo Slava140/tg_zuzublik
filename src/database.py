@@ -4,7 +4,7 @@ from sqlalchemy import String, BigInteger, Integer
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine, AsyncSession
 
-from src.config import settings
+from config import settings
 
 engine = create_async_engine(settings.database_url)
 async_session = async_sessionmaker(engine, autoflush=False, expire_on_commit=False)

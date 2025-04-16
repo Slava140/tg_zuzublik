@@ -6,9 +6,9 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-from src.config import settings
-from src.database import create_tables
-from src.handlers import router
+from config import settings
+from database import create_tables
+from handlers import router
 
 
 settings.uploads_dir.mkdir(exist_ok=True)

@@ -2,7 +2,6 @@ from datetime import datetime, timezone
 from io import BytesIO
 from itertools import groupby
 from pathlib import Path
-from pprint import pp
 from typing import TYPE_CHECKING, Sequence
 
 import aiofiles
@@ -15,10 +14,10 @@ from lxml.etree import XPathEvalError
 from pydantic import ValidationError
 from sqlalchemy import insert, select, func, update, case
 
-from src.config import settings
-from src.database import async_db_session, Item
-from src.errors import SuffixNotAllowedError, InvalidDocumentSchemaError, UnableToReadError
-from src.schemas import ItemS, FullItemS
+from config import settings
+from database import async_db_session, Item
+from errors import SuffixNotAllowedError, InvalidDocumentSchemaError, UnableToReadError
+from schemas import ItemS, FullItemS
 
 if TYPE_CHECKING:
     from aiogram.types import Document
