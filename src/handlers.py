@@ -60,14 +60,14 @@ async def message_sending_document_handler(message: Message, state: FSMContext):
 
     except SuffixNotAllowedError:
         await message.answer(
-            text=f'Я не умею обрабатывать такие файлы.\nА такие могу: {settings.allowed_suffixes}',
+            text=f'Я не умею обрабатывать такие файлы.\nА такие могу: <code>{settings.allowed_suffixes}</code>',
             reply_markup=get_one_button_keyboard('Ааа, понятно! Отправить другой файл', 'send')
         )
         return
 
     except (InvalidDocumentSchemaError, UnableToReadError):
         await message.answer(
-            text=f'Файл должен содержать столбцы {settings.document_column_names}',
+            text=f'Файл должен содержать столбцы <code>{settings.document_column_names}</code>',
             reply_markup=get_one_button_keyboard('Отправить другой файл', 'send')
         )
         return
