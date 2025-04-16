@@ -12,7 +12,7 @@ from fake_useragent import UserAgent
 from lxml import html
 from lxml.etree import XPathEvalError
 from pydantic import ValidationError
-from sqlalchemy import insert, select, func, update, case
+from sqlalchemy import insert, select, func, update
 
 from config import settings
 from database import async_db_session, Item
